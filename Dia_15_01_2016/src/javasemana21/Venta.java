@@ -29,12 +29,13 @@ public class Venta {
     ***************/
     
     public double calculaimporte()
-    {double impor=0;
+    {
+        double impor;
         impor=precio*cant;
         return impor;
     }
     public double calculointeres()
-    {  double interes=0;
+    {  double interes;
          if(tv==0)
              interes=0.15*calculaimporte();
          else
@@ -42,7 +43,7 @@ public class Venta {
          return interes;
     }
     public double calculodescuento()
-    {  double  descuento=0;
+    {  double  descuento;
           if(tv==1)
               descuento=0.12*calculaimporte();
           else
@@ -50,7 +51,7 @@ public class Venta {
           return descuento;
     }
     public double calculopago()
-    {    double pago=0;
+    {    double pago;
             pago=calculaimporte()+calculointeres()-calculodescuento();
             return pago;
     }
